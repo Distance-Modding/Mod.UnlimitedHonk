@@ -38,8 +38,11 @@ namespace Distance.UnlimitedHonk
 			Logger = LogManager.GetForCurrentAssembly();
 
 			Logger.Info("YOU HAVE ENTERED UNLIMITED HONK ZONE");
+            Logger.Info("\n --------------------------------------------------------------- \n Mod Ver: 1.00 \n ---------------------------------------------------------------");
 
-			RuntimePatcher.AutoPatch();
+            RuntimePatcher.AutoPatch();
+
+            
 		}
 	}
 }
