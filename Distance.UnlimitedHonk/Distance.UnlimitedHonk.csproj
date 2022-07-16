@@ -14,6 +14,7 @@
     <Deterministic>true</Deterministic>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,78 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\0Harmony.dll</HintPath>
-    </Reference>
-    <Reference Include="Accessibility" />
-    <Reference Include="AmplifyMotion">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\AmplifyMotion.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-UnityScript">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\Assembly-UnityScript.dll</HintPath>
-    </Reference>
-    <Reference Include="Centrifuge.Distance">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Centrifuge\GameSupport\Centrifuge.Distance.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil, Version=0.10.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Data.Tds">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\Mono.Data.Tds.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Posix">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\Mono.Posix.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Security">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\Mono.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.WebBrowser">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\Mono.WebBrowser.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoMod.RuntimeDetour">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\MonoMod.RuntimeDetour.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoMod.Utils">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\MonoMod.Utils.dll</HintPath>
-    </Reference>
-    <Reference Include="NAudio">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\NAudio.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Reactor.API, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Centrifuge\Reactor.API.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.PlaymodeTestsRunner">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VR">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\UnityEngine.VR.dll</HintPath>
-    </Reference>
-    <Reference Include="XInputDotNetPure">
-      <HintPath>D:\Games\Steam2\steamapps\common\Distance\Distance_Data\Managed\XInputDotNetPure.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Harmony\Assembly-CSharp\HornGadget\GadgetUpdateLocal.cs" />
     <Compile Include="Mod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,7 +42,54 @@
     <None Include="Distance.UnlimitedHonk.targets" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HarmonyX.2.5.1\lib\net35\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Centrifuge.GameSupport.Distance.3.0.7868.41513\lib\net35\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Centrifuge.Distance, Version=3.0.7868.41513, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Centrifuge.GameSupport.Distance.3.0.7868.41513\lib\net35\Centrifuge.Distance.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.10.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.10.4\lib\net35\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb, Version=0.10.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.10.4\lib\net35\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb, Version=0.10.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.10.4\lib\net35\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks, Version=0.10.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mono.Cecil.0.10.4\lib\net35\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour, Version=21.7.8.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoMod.RuntimeDetour.21.7.8.3\lib\net35\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils, Version=21.7.8.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoMod.Utils.21.7.8.3\lib\net35\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.7.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Centrifuge.GameSupport.Distance.3.0.7868.41513\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Json.Net.Unity3D.9.0.1\lib\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Reactor.API, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Centrifuge.Mod.SDK.3.2.0\lib\net35\Reactor.API.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Centrifuge.GameSupport.Distance.3.0.7868.41513\lib\net35\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Centrifuge.GameSupport.Distance.3.0.7868.41513\lib\net35\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Centrifuge.GameSupport.Distance.3.0.7868.41513\lib\net35\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <!-- 15.0 is for VS2017, adjust if necessary -->

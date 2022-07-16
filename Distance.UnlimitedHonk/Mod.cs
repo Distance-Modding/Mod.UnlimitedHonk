@@ -27,7 +27,7 @@ namespace Distance.UnlimitedHonk
 		/// </summary>
 		public void Initialize(IManager manager)
 		{
-			// Do not destroy the current game object when loading a new scene
+			// You cannot stop the honk
 			DontDestroyOnLoad(this);
 
 			Instance = this;
