@@ -1,6 +1,6 @@
 ﻿using HarmonyLib;
 
-namespace Distance.UnlimitedHonk.Harmony
+namespace UnlimitedHonk.Patches
 {
     [HarmonyPatch(typeof(HornGadget), "GadgetUpdateLocal")]
     internal class HornGadget__GadgetUpdateLocal
