@@ -28,6 +28,11 @@ namespace UnlimitedHonk
 
             Log = BepInEx.Logging.Logger.CreateLogSource(modGUID);
             Logger.LogInfo("YOU HAVE ENTERED UNLIMITED HONK ZONE");
+
+            //Apply Patches
+            Logger.LogInfo("Loading...");
+            harmony.PatchAll();
+            Logger.LogInfo("Loaded!");
         }
     }
 }
